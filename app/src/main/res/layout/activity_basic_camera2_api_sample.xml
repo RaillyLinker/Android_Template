@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <!-- 카메라 프리뷰 화면 뷰 -->
+    <com.example.prowd_android_template.custom_view.AutoFitTextureView
+        android:id="@+id/camera_preview_auto_fit_texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/flash_mode_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="Flash"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/timer_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/flash_mode_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_r"
+        android:text="off"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/flash_mode_label"
+        app:layout_constraintStart_toStartOf="@id/flash_mode_label"
+        app:layout_constraintTop_toBottomOf="@id/flash_mode_label" />
+
+    <TextView
+        android:id="@+id/timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="Timer"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/surface_ratio_label"
+        app:layout_constraintStart_toEndOf="@id/flash_mode_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_r"
+        android:text="0"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/timer_label"
+        app:layout_constraintStart_toStartOf="@id/timer_label"
+        app:layout_constraintTop_toBottomOf="@id/timer_label" />
+
+    <TextView
+        android:id="@+id/surface_ratio_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="Ratio"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/surface_size_label"
+        app:layout_constraintStart_toEndOf="@id/timer_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/surface_ratio_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_r"
+        android:text="1 : 1"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/surface_ratio_label"
+        app:layout_constraintStart_toStartOf="@id/surface_ratio_label"
+        app:layout_constraintTop_toBottomOf="@id/surface_ratio_label" />
+
+    <TextView
+        android:id="@+id/surface_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="Size"
+        android:textColor="#FFFFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/surface_ratio_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/surface_size_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_r"
+        android:text="100 : 100"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/surface_size_label"
+        app:layout_constraintStart_toStartOf="@id/surface_size_label"
+        app:layout_constraintTop_toBottomOf="@id/surface_size_label" />
+
+    <LinearLayout
+        android:id="@+id/debug_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flash_mode_value">
+
+        <ImageView
+            android:id="@+id/debug_yuv_to_rgb_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:id="@+id/debug_rotate_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/debug_crop_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/debug_resize_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/debug_image_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="ORIGIN"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/debug_image_container"
+        app:layout_constraintStart_toStartOf="@id/debug_image_container"
+        app:layout_constraintTop_toBottomOf="@id/debug_image_container" />
+
+    <ImageView
+        android:id="@+id/capture_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/debug_image_label" />
+
+    <TextView
+        android:id="@+id/capture_mode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="사진"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/record_or_capture_btn"
+        app:layout_constraintEnd_toStartOf="@id/record_or_capture_btn" />
+
+    <TextView
+        android:id="@+id/record_mode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:visibility="gone"
+        android:fontFamily="@font/apple_sd_gothic_neo_sb"
+        android:text="동영상"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/record_or_capture_btn"
+        app:layout_constraintStart_toEndOf="@id/record_or_capture_btn" />
+
+    <com.example.prowd_android_template.custom_view.CircleImageView
+        android:id="@+id/gallery_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="20dp"
+        android:src="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/record_or_capture_btn" />
+
+    <com.example.prowd_android_template.custom_view.CircleImageView
+        android:id="@+id/record_or_capture_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img_layout_activity_basic_camera2_api_sample_capture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.example.prowd_android_template.custom_view.CircleImageView
+        android:id="@+id/camera_change_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img_layout_activity_basic_camera2_api_sample_camera_change"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/record_or_capture_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

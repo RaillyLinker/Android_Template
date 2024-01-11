@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- (필요 디바이스 기능 설정) -->
+    <!-- <uses-feature -->
+    <!-- android:name="android.hardware.camera" -->
+    <!-- android:required="true" /> -->
+    <!-- (필요 권한 설정) -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 사용 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 대략적 위치 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 정확한 위치 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 카메라 권한 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- API 33 미만 통합 외부 저장소 읽기 권한 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> <!-- API 33 이상 외부 저장소 이미지 읽기 권한 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" /> <!-- API 33 이상 외부 저장소 비디오 읽기 권한 -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" /> <!-- API 33 이상 외부 저장소 오디오오 읽기권한 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" /> <!-- 외부 저장소 쓰기 권한 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 녹음 권한 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- OS 세팅 조작 권한 -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        android:minSdkVersion="30"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 포그라운드 서비스 권한 -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Application"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity_set.activity_click_effect_sample.ActivityClickEffectSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_web_view_sample.ActivityWebViewSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_view_to_bitmap_sample.ActivityViewToBitmapSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_pdf_viewer_sample.ActivityPdfViewerSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_screen_to_pdf_sample.ActivityScreenToPdfSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_pinch_image_list_viewer.ActivityPinchImageListViewer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_pinch_image_view_list_sample.ActivityPinchImageViewListSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_thread_confluence_obj_sample.ActivityThreadConfluenceObjSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_system_camera_video_sample.ActivitySystemCameraVideoSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_search_list_sample.ActivitySearchListSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_user_sign_out_sample.ActivityUserSignOutSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_user_login_sample.ActivityUserLoginSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_email_user_join_sample.ActivityEmailUserJoinSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_user_sample_list.ActivityUserSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_dp_and_px_calculator.ActivityDpAndPxCalculator"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_touch_delegate_sample.ActivityTouchDelegateSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_bitmap_and_opencv_jni_sample.ActivityBitmapAndOpencvJniSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_jni_sample_list.ActivityJniSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_broadcast_receiver_sample_sender.ActivityBroadcastReceiverSampleSender"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_notification_sample.ActivityBasicNotificationSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_broadcast_receiver_sample.ActivityBroadcastReceiverSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_service_sample.ActivityBasicServiceSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_aar_module_caller_sample.ActivityAarModuleCallerSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_module_caller_sample.ActivityModuleCallerSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_brightness_change_sample.ActivityBrightnessChangeSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_etc_sample_list.ActivityEtcSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_pinch_image_viewer.ActivityPinchImageViewer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_media_player_sample_list.ActivityMediaPlayerSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_pinch_image_view_sample.ActivityPinchImageViewSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_easy_lut_sample.ActivityEasyLutSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_image_processing_sample_list.ActivityImageProcessingSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_camera2_api_sample.ActivityBasicCamera2ApiSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme_AndroidManifest_ActivityBasicCamera2ApiSample" />
+        <activity
+            android:name=".activity_set.activity_basic_header_footer_recycler_view_sample.ActivityBasicHeaderFooterRecyclerViewSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_horizontal_recycler_view_sample.ActivityBasicHorizontalRecyclerViewSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_vertical_recycler_view_sample.ActivityBasicVerticalRecyclerViewSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_permission_sample.ActivityPermissionSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_system_camera_photo_sample.ActivitySystemCameraPhotoSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_camera_sample_list.ActivityCameraSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_jni_sample.ActivityJniSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_tab_layout_sample.ActivityBasicTabLayoutSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_basic_bottom_sheet_navigation_sample.ActivityBasicBottomSheetNavigationSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_view_pager_sample_list.ActivityViewPagerSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_recycler_view_sample_list.ActivityRecyclerViewSampleList"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_dialog_sample.ActivityDialogSample"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_home.ActivityHome"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".activity_set.activity_init.ActivityInit"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme_AndroidManifest_ActivityInit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.BackgroundServiceTest"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.ForegroundServiceTest"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.BackgroundServiceBroadcastTest"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".services.FcmService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
